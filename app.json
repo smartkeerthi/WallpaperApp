@@ -4,12 +4,7 @@
     "slug": "wallpaper",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "icon": "./assets/logo.png",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -21,12 +16,22 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Wallpaper to access your photos.",
+          "savePhotosPermission": "Allow Wallpaper to save photos."
+        }
+      ]
+    ],
+    "description": ""
   }
 }
