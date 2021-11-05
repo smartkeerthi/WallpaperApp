@@ -5,7 +5,6 @@ import { StyleSheet, Text, View } from "react-native";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
 import HomeScreen from "./Screens/HomeScreen";
 import SplashScreen from "./Screens/SplashScreen";
-import WallpaperScreen from "./Screens/WallpaperScreen";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +27,6 @@ export default function App() {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Wallpaper" component={WallpaperScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
