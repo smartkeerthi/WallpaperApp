@@ -6,6 +6,7 @@ import {
   FlatList,
   Image,
   StyleSheet,
+  TextInput,
   View,
 } from "react-native";
 import { createClient } from "pexels";
