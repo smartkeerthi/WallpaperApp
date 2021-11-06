@@ -1,8 +1,17 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { ActivityIndicator, Animated, StyleSheet, View } from "react-native";
+import {
+  ActivityIndicator,
+  Animated,
+  Dimensions,
+  StyleSheet,
+  TextInput,
+  View,
+} from "react-native";
 import * as MediaLibrary from "expo-media-library";
 import * as FileSystem from "expo-file-system";
+
+const { width, height } = Dimensions.get("window");
 
 const DownloadImg = ({ item, scrollXAnimated, index }) => {
   const [loading, setLoading] = useState(false);
@@ -88,7 +97,7 @@ export default DownloadImg;
 const styles = StyleSheet.create({
   downloadContainer: {
     position: "absolute",
-    bottom: 30,
+    top: height - 100,
     alignItems: "center",
     justifyContent: "center",
     width: "100%",

@@ -67,7 +67,7 @@ const HomeScreen = () => {
 
   useEffect(() => {
     client.photos
-      .search({ query: "nature", per_page: 25 })
+      .search({ query: "wallpaper", per_page: 80 })
       .then((photos) => {
         setData(photos.photos);
         setLoading(false);
