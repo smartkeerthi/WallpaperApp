@@ -16,32 +16,34 @@ import {
   Directions,
   State,
 } from "react-native-gesture-handler";
+import BackImg from "../Components/BackImg";
+import DownloadImg from "../Components/DownloadImg";
 
 const { width, height } = Dimensions.get("window");
 const IMG_WIDTH = width * 0.85;
-const IMG_HEIGHT = IMG_WIDTH * 1.8;
+const IMG_HEIGHT = IMG_WIDTH * 1.7;
 const SPACING = 20;
 
-const BackImg = ({ item, scrollXAnimated, index }) => {
-  const inputRange = [index - 1, index, index + 1];
-  const opacity = scrollXAnimated.interpolate({
-    inputRange,
-    outputRange: [0, 1, 0],
-  });
+// const BackImg = ({ item, scrollXAnimated, index }) => {
+//   const inputRange = [index - 1, index, index + 1];
+//   const opacity = scrollXAnimated.interpolate({
+//     inputRange,
+//     outputRange: [0, 1, 0],
+//   });
 
-  if (!item.src) {
-    return null;
-  }
-  return (
-    <Animated.View
-      key={item.id}
-      style={[
-        StyleSheet.absoluteFillObject,
-        { backgroundColor: item.avg_color, opacity },
-      ]}
-    ></Animated.View>
-  );
-};
+//   if (!item.src) {
+//     return null;
+//   }
+//   return (
+//     <Animated.View
+//       key={item.id}
+//       style={[
+//         StyleSheet.absoluteFillObject,
+//         { backgroundColor: item.avg_color, opacity },
+//       ]}
+//     ></Animated.View>
+//   );
+// };
 
 const HomeScreen = () => {
   const [data, setData] = useState([]);
@@ -170,7 +172,7 @@ const HomeScreen = () => {
                       style={{
                         position: "absolute",
                         left: -IMG_WIDTH / 2,
-                        top: (height - IMG_HEIGHT) / 2 - 35,
+                        top: (height - IMG_HEIGHT) / 2 - 50,
                         transform: [{ translateX }, { scale }],
                         opacity,
                       }}
@@ -187,6 +189,17 @@ const HomeScreen = () => {
                   );
                 }}
               />
+
+              {data.map((item, index) => {
+                return (
+                  <DownloadImg
+                    key={item.id}
+                    item={item}
+                    index={index}
+                    scrollXAnimated={scrollXAnimated}
+                  />
+                );
+              })}
             </>
           )}
         </SafeAreaView>

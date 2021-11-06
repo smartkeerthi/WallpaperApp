@@ -16,6 +16,7 @@
     "axios": "^0.24.0",
     "dotenv": "^10.0.0",
     "expo": "~43.0.0",
+    "expo-file-system": "~13.0.3",
     "expo-image-picker": "~11.0.3",
     "expo-media-library": "~13.0.3",
     "expo-screen-capture": "^4.0.3",
@@ -30,6 +31,7 @@
     "react-native-screens": "~3.8.0",
     "react-native-shared-element": "0.8.2",
     "react-native-svg": "12.1.1",
+    "react-native-tiny-toast": "^1.0.7",
     "react-native-web": "0.17.1",
     "react-navigation-shared-element": "^3.1.3"
   },
